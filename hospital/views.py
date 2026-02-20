@@ -31,3 +31,5 @@ def starter_page(request):
     return render(request, 'starter-page.html')
 def testimonials(request):
     return render(request, 'testimonials.html')
+def error(request):
+    return render(request, '404.html')

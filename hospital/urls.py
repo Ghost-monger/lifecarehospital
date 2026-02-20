@@ -16,14 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from about import views
-from about.views import appointment
+from hospital import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('about/', views.about, name='about.html'),
+    path('404/', views.error, name='404.html'),
+    path('hospital/', views.about, name='hospital.html'),
     path('contact/', views.contact, name='contact.html'),
-    path('appointment/', appointment, name='appointment.html'),
+    path('appointment/', views.appointment, name='appointment.html'),
     path('departmentdetails/', views.department_details, name='department-details.html'),
     path('departments/', views.departments, name='departments.html'),
     path('doctors/', views.doctors, name='doctors.html'),
@@ -36,6 +36,7 @@ urlpatterns = [
     path('services/', views.services, name='services.html'),
     path('starterpage/', views.starter_page, name='starter-page.html'),
     path('testimonials/', views.testimonials, name='testimonials.html'),
+    path('about/', views.about, name='about.html'),
 
 
 
